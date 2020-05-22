@@ -1,0 +1,389 @@
+@basecolor:#e92322;
+.wjs_header{
+    height:50px;
+    border-bottom:1px solid #ccc;
+    line-height: 50px;
+    text-align:center;
+    .row{
+        height: 100%;
+        div:nth-of-type(-n+3){
+            border-right: 1px solid #ccc;
+            height: 100%;
+            >.wjs_code{
+                display: block;
+                position: relative;
+                &:hover{
+                    >img{
+                        display: block;
+                    }
+                }
+                >img{
+                    position: absolute;
+                    top:49px;
+                    left:50%;
+                    transform: translateX(-50%);
+                    border:1px solid #ccc;
+                    border-top:none;
+                    display: none;
+                    z-index:999;
+                }
+            }
+        }
+        div:last-of-type{
+            >.btn-danger{
+                background-color: @basecolor;
+                border-color: @basecolor;
+            }
+            >.btn{
+                padding:3px 15px;
+            }
+            >.btn-link{
+                color:#333;
+            }
+        }
+    }
+}
+// 导航条
+.wjs_nav{
+    margin-bottom: 0px;
+    .navbar-toggle{
+        margin-top:23px;
+        margin-bottom: 23px;
+    }
+    .navbar-brand{
+        line-height: 50px;
+        >.wjs_icon_logo{
+            font-size: 40px;
+            color:@basecolor;
+        }
+        >.wjs_icon_text{
+            font-size: 40px;
+            color:#333;
+        }
+    }
+    .navbar-nav{
+        >.active{
+            >a{
+                background-color: transparent;
+                border-bottom:3px solid @basecolor;
+            }
+        }
+        li{
+            >a{
+                line-height: 50px;
+                font-size: 16px;
+                &:hover{
+                    border-bottom:3px solid @basecolor;
+                    color:#777;
+                }
+            }
+        }
+    }
+}
+//  轮播图
+.wjs_banner{
+    .item{
+        >a{
+            width: 100%;
+            display: block;
+        }
+        >.mobileImg{
+            >img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .pcImg{
+            background-position: center center;
+            background-size: cover;
+            height: 410px;
+        }
+    }
+}
+// 信息模块
+.wjs_info{
+    padding:30px;
+    .media{
+        margin-top:20px;
+        >.media_left{
+            display: table-cell;
+            vertical-align: top;
+            font-size: 30px;
+        }
+        >.media_body{
+            display: table-cell;
+            vertical-align: top;
+            padding-left: 10px;
+            >h4{
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+// reverse 模块
+.wjs_reverse{
+    height: 60px;
+    line-height: 60px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    .row{
+        i{
+            font-size: 18px;
+        }
+        a{
+            &:hover{
+                color:@basecolor;
+            }
+        }
+        .reverse_now{
+            color: @basecolor;
+            border-bottom:1px dashed @basecolor;
+        }
+    }
+}
+// product 模块
+.wjs_product{
+    clear: both;
+    padding:24px;
+    background-color: #eee;
+    overflow: hidden;
+    .nav-tabs{
+        >li{
+            margin:0 15px;
+            >a{
+                border:none;
+                border-radius:0;
+                line-height: 70px;
+                padding:0 15px;
+                background-color: transparent;
+                &:hover{
+                border-bottom:3px solid @basecolor;
+                }    
+            }
+        }
+        >.active{
+            a{
+                border-bottom:3px solid @basecolor;
+            }
+            >a:hover,a:focus{
+                background-color: transparent;
+                border:none;
+                border-bottom:3px solid @basecolor;
+            }
+        }
+    }
+    .tab-pane{
+        .wjs_productbox{
+            margin-top:20px;
+            // height: 150px;
+            position: relative;
+            background-color: #fff;
+            .product_left{
+                margin-right: 100px;
+                height: 100%;
+                padding-top: 10px;
+                font-size: 12px;
+                >p{
+                    font-size: 16px;
+                    text-align: center;
+                }
+                >.row{
+                    margin-left: 0;
+                    margin-right: 0;
+                    div{
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                    >div:first-of-type{
+                        text-align: left;
+                    }
+                    >div:last-of-type{
+                        text-align: right;
+                    }
+                }
+            }
+            .product_right{
+                border-left:1px dashed #ccc;
+                width: 100px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top:0;
+                padding-top: 30px;
+                text-align: center;
+                color:@basecolor;
+                >b{
+                    font-size: 40px;
+                }
+                &::before,&::after{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #eee;
+                    border-radius: 50%;
+                    left:-5px;
+                }
+                &::before{
+                    top:-5px;
+                    box-shadow: inset 0px -1px 1px #ddd;
+                }
+                &::after{
+                    bottom:-5px;
+                    bottom:-5px;box-shadow: inset 0px 1px 1px #ddd;
+                }
+                .baobei{
+                    width: 100%;
+                    position: absolute;
+                    top:19px;
+                    left:50%;
+                    transform: translateX(-50%);
+                    >span{
+                        cursor: pointer;
+                    }
+                    >span:first-of-type{
+                        color:red;
+                        border:1px solid red;
+                    }
+                    >span:last-of-type{
+                        color:blue;
+                        border:1px solid blue;
+                    }
+                }
+            }
+            &.active{
+                background-color: @basecolor;
+                color:#fff;
+                .product_right{
+                    color:#fff;
+                }
+                .product_left{
+                    &::before{
+                        content: "\e915";
+                        // 还需要添加字体
+                        font-family: 'wjs';
+                        font-size: 18px;
+                        position: absolute;
+                        top:-3px;
+                        left:0px;
+                    }
+                }
+            }
+        }
+    }
+}
+// news 模块
+.wjs_news{
+    padding:20px 35px;
+    .row{
+        >.col-md-1{
+            margin-top: 20px;
+        .nav-tabs{
+            border-bottom:none;
+            li{
+                margin-bottom: 60px;
+                text-align: center;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+                .wjs_icon{
+                    font-size: 30px;
+                }
+                a{
+                    width: 62px;
+                    height: 62px;
+                    line-height: 64px;
+                    padding:0;
+                    color:#fff;
+                    background-color: #eee;
+                    border-radius: 50%;
+                    border:none;
+                    &:hover{
+                        border:none;
+                        background-color: @basecolor;
+                    }
+                }
+            }
+            >.active{
+                a,a:hover,a:focus{
+                    background-color: @basecolor;
+                    border:none;
+                }
+            }
+        }
+        .newsline{
+            height: 100%;
+            border-left: 1px dashed @basecolor;
+            position: absolute;
+            top:0;
+            left:45px;
+        }
+        @media screen and (max-width:768px){
+            .newsline{
+                display: none;
+            }
+            .nav-tabs{
+                >li{
+                    width: 25%;
+                    margin:20px 0 0;
+                }
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:992px){
+            .newsline{
+                display: none;
+            }
+            .nav-tabs{
+                >li{
+                    margin:10px 60px 0 30px;
+                }
+            }
+        }
+    }
+        h3{
+            position: relative;
+            text-align: center;
+            margin: 20px 0 0;
+            border-bottom: 1px solid #eee;
+            line-height: 48px;
+            &::after{
+                position: absolute;
+                content: '';
+                width: 8px;
+                right: -8px;
+                height: 8px;
+                border: 1px solid #eee;
+                border-radius: 50%;
+                bottom: -4px;
+            }
+        }
+        .tab-content{
+            ul{
+                list-style: none;
+                margin-top: 20px;
+                li{
+                    a{
+                        line-height: 60px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+.wjs_partner{
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    >.partner_list{
+        list-style: none;
+        li{
+            display: inline-block;
+            .wjs_icon{
+                font-size: 80px;
+                padding:0 10px;
+            }
+        }
+    }
+}
